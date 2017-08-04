@@ -2,8 +2,8 @@ package prob5;
 
 public class MainApp {
 
-	public static void main(String[] args) {
-		try {
+	public static void main(String[] args) throws MyStackException {
+	
 			MyStack stack = new MyStack(3);
 			stack.push("Hello");
 			stack.push("World");
@@ -24,11 +24,11 @@ public class MainApp {
 
 			stack = new MyStack(3);
 			stack.push("Hello");
-
+			try {
 			System.out.println(stack.pop());
 			System.out.println(stack.pop());
 			
-		} catch ( MyStackException ex) {
+	} catch ( MyStackException ex) {
 			System.out.println( ex );
 		}
 
